@@ -37,11 +37,13 @@ jobs:
         uses: gradle/actions/setup-gradle@v4
         with:
           gradle-version: '8.13'
-          wrapper-validation-enabled: false
 
       - name: Build with Gradle
         run: |
           cd android
+          gradle assembleDebug
+          rm -f gradle/wrapper/gradle-wrapper.jar
+          rm -f gradle/wrapper/gradle-wrapper.properties
           gradle assembleDebug
 
       - name: Upload APK
