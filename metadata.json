@@ -1,0 +1,5 @@
+{
+  "name": "Smart Notes",
+  "description": "A feature-rich notes application with categories, search, and secure password protection for sensitive notes.",
+  "requestFramePermissions": []
+}
